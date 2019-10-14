@@ -5,7 +5,7 @@
 	"url" : "https://developer.android.com/studio/command-line/logcat.html",
 	"regex" : {
 	    "std" : {
-		"pattern" : "^(?<timestamp>\\d{2}-\\d{2}\\s+\\d{2}:\\d{2}:\\d{2}.\\d{3}) (?<log_pid>\\s?\\w+) (?<log_tid>\\s?\\w+) (?<level>\\w) (?<log_tag>\\w+): (?<body>.*)$"
+		"pattern" : "^(?<timestamp>\\d{2}-\\d{2}\\s+\\d{2}:\\d{2}:\\d{2}.\\d{3})(?:\\d{3})? (?<log_pid>\\s+\\w+) (?<log_tid>\\s+\\w+) (?<level>\\w) (?<body>.*)$"
 	    }
 	},
 	"timestamp-format" : ["%m-%d %H:%M:%S.%L"],
@@ -26,15 +26,12 @@
 	    "log_tid" : {
 		"kind" : "string",
 		"identifier" : true
-	    },
-	    "log_tag" : {
-		"kind" : "string",
-		"identifier" : true
 	    }
 	},
 	"sample" : [
 	    {
-		"line" : "01-01 02:50:25.351  1310  1502 V WindowManager: handleMessage: exit"
+		"line" : "09-19 16:14:44.867483  1555  1653 I WindowManager: No existing display settings /data/system/display_settings.xml; starting empty",
+		"line" : "01-01 10:49:30.659433     0     0 I Reserved: reserved region for node 'modem_region@0': base 0x0000000086c00000, size 106 MiB",
 	    }
 	]
     }
