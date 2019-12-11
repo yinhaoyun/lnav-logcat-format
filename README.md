@@ -11,3 +11,7 @@ lnav version 0.8.1 or above.
 
 logcat messages should be generated in **threadtime** output format:
 > adb logcat -v threadtime
+
+# install
+
+> lnav -i logcat.json
