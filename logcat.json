@@ -34,6 +34,16 @@
 				"identifier": true
 			}
 		},
+        "highlights": {
+            "OUT_OF_SERVICE": {
+                "pattern": "DISCONNECTED|OUT_OF_SERVICE",
+                "color": "red"
+            },
+			"IN_SERVICE": {
+				"pattern": "CONNECTED|IN_SERVICE|REG_ROAMING",
+				"color": "green"
+			}
+		},
 		"sample": [
 			{
 				"line": "09-19 16:14:44.867483  1555  1653 I WindowManager: No existing display settings /data/system/display_settings.xml; starting empty"
