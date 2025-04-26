@@ -1,11 +1,11 @@
 {
 	"logcat_log": {
 		"title": "logcat",
-		"description": "The system logger format found on android.",
+		"description": "The system logger format found on Android.",
 		"url": "https://developer.android.com/studio/command-line/logcat.html",
 		"regex": {
 			"std": {
-				"pattern": "^(?<timestamp>\\d{2}-\\d{2}\\s+\\d{2}:\\d{2}:\\d{2}.\\d{3})(?:\\d{3})?\\s+(?<log_pid>\\d+)\\s+(?<log_tid>\\d+)\\s+(?<level>\\w)\\s+(?<body>.*)$"
+				"pattern": "^(?<timestamp>\\d{2}-\\d{2}\\s+\\d{2}:\\d{2}:\\d{2}.\\d{3})(?:\\d{3})?\\s+(?<log_pid>\\d+)\\s+(?<log_tid>\\d+)\\s+(?<level>\\w)\\s+(?<tag>[a-zA-Z0-9 _\\-\\.]{1,40}?)\\s*:(?<body>.*)$"
 			}
 		},
 		"timestamp-format": [
@@ -28,6 +28,10 @@
 			"log_tid": {
 				"kind": "integer",
 				"identifier": true
+			},
+			"tag": {
+				"kind": "string",
+				"identifier": true
 			}
 		},
 		"sample": [
@@ -36,6 +40,12 @@
 			},
 			{
 				"line": "01-01 10:49:30.659433     0     0 I Reserved: reserved region for node 'modem_region@0': base 0x0000000086c00000, size 106 MiB"
+			},
+			{
+                "line": "04-26 12:34:56.123456  1234  5678 D EXAMPLE-TAG   : This is a log message with spaces after the tag"
+            },
+			{
+				"line": "04-25 03:05:57.862  4644  4660 I LTE Application:  shutdownApp"
 			}
 		]
 	}
