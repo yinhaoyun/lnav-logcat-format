@@ -42,6 +42,14 @@
 			"IN_SERVICE": {
 				"pattern": "CONNECTED|IN_SERVICE|REG_ROAMING",
 				"color": "green"
+			},
+			"SETUP_DATA_CALL_SUCCESS": {
+				"pattern": "SETUP_DATA_CALL.*cause=NONE",
+				"background-color": "blue"
+			},
+			"SETUP_DATA_CALL_FAIL": {
+				"pattern": "SETUP_DATA_CALL.*cause=(?!NONE).*",
+				"background-color": "red"
 			}
 		},
 		"sample": [
