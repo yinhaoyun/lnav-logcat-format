@@ -6,7 +6,7 @@
 		"url": "https://developer.android.com/studio/command-line/logcat.html",
 		"regex": {
 			"std": {
-				"pattern": "^(?<timestamp>\\d{2}-\\d{2}\\s+\\d{2}:\\d{2}:\\d{2}.\\d{3})(?:\\d{3})?\\s+(?<log_pid>\\d+)\\s+(?<log_tid>\\d+)\\s+(?<level>\\w)\\s+(?<tag>[a-zA-Z0-9 _\\-\\.]{1,40}?)\\s*:(?<body>.*)$"
+				"pattern": "^(?<timestamp>\\d{2}-\\d{2}\\s+\\d{2}:\\d{2}:\\d{2}.\\d{3})(?:\\d{3})?\\s+(?<log_pid>\\d+)\\s+(?<log_tid>\\d+)\\s+(?<level>\\w)\\s+(?<tag>[a-zA-Z0-9 _\\-\\.\\[\\]\\#\\@ ]{1,50}:)?\\s*(?<body>.*)$"
 			}
 		},
 		"timestamp-format": [
@@ -65,6 +65,9 @@
 			},
 			{
 				"line": "04-25 03:05:57.862  4644  4660 I LTE Application:  shutdownApp"
+			},
+			{
+				"line": "04-30 08:55:10.144 21899 21899 I [main] c.t.p.workflow.PwfEarlyPciMetrics: current pci state: {amount=5.50 $, pci_compliant=true, payment_id=e89a5fe3-a885-4b47-b1f0-29e551e0b70f, network_ssid=Batman2.4, pwf_feature_flag_enabled=true}"
 			}
 		]
 	}
