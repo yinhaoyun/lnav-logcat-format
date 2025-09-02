@@ -1,4 +1,5 @@
 {
+	"$schema": "https://lnav.org/schemas/format-v1.schema.json",
 	"logcat_log_user": {
 		"title": "logcat_log_user",
 		"description": "The system logger format found on android.",

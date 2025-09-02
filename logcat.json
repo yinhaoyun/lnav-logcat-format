@@ -1,4 +1,5 @@
 {
+	"$schema": "https://lnav.org/schemas/format-v1.schema.json",
 	"logcat_log": {
 		"title": "logcat",
 		"description": "The system logger format found on Android.",
