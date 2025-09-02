@@ -34,11 +34,11 @@
 				"identifier": true
 			}
 		},
-        "highlights": {
-            "OUT_OF_SERVICE": {
-                "pattern": "DISCONNECTED|OUT_OF_SERVICE",
-                "color": "red"
-            },
+		"highlights": {
+			"OUT_OF_SERVICE": {
+				"pattern": "DISCONNECTED|OUT_OF_SERVICE",
+				"color": "red"
+			},
 			"IN_SERVICE": {
 				"pattern": "CONNECTED|IN_SERVICE|REG_ROAMING",
 				"color": "green"
@@ -60,8 +60,8 @@
 				"line": "01-01 10:49:30.659433     0     0 I Reserved: reserved region for node 'modem_region@0': base 0x0000000086c00000, size 106 MiB"
 			},
 			{
-                "line": "04-26 12:34:56.123456  1234  5678 D EXAMPLE-TAG   : This is a log message with spaces after the tag"
-            },
+				"line": "04-26 12:34:56.123456  1234  5678 D EXAMPLE-TAG   : This is a log message with spaces after the tag"
+			},
 			{
 				"line": "04-25 03:05:57.862  4644  4660 I LTE Application:  shutdownApp"
 			}

@@ -5,7 +5,7 @@
 		"url": "https://developer.android.com/studio/command-line/logcat.html",
 		"regex": {
 			"std": {
-				"pattern": "^(?<timestamp>\\d{2}-\\d{2}\\s+\\d{2}:\\d{2}:\\d{2}.\\d{3})(?:\\d{3})? \\s*(?<user>\\w+) \\s*(?<log_pid>\\d+) \\s*(?<log_tid>\\d+) (?<level>\\w) (?<body>.*)$"
+				"pattern": "^(?<timestamp>\\d{2}-\\d{2}\\s+\\d{2}:\\d{2}:\\d{2}.\\d{3})(?:\\d{3})?\\s+(?<user>\\w+)\\s+(?<log_pid>\\d+)\\s+(?<log_tid>\\d+) (?<level>\\w) (?<body>.*)$"
 			}
 		},
 		"timestamp-format": [
@@ -20,7 +20,7 @@
 			"fatal": "F"
 		},
 		"user": {
-                	"kind": "string"
+			"kind": "string"
 		},
 		"opid-field": "log_pid",
 		"value": {
